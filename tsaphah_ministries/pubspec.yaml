@@ -1,0 +1,36 @@
+name: tsaphah_ministries
+description: "Tsaphah Ministries - responsive Flutter app (single home page)."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  url_launcher: ^6.2.5
+  google_fonts: ^6.2.1
+  font_awesome_flutter: ^10.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.png
+    - assets/images/pastor.jpeg
+    - assets/images/church_hero.jpeg
+    - assets/images/gallery/worship_service.jpeg
+    - assets/images/gallery/women_ministry.jpeg
+    - assets/images/gallery/baptism_service.jpeg
+    - assets/images/gallery/community_outreach.jpeg
+    - assets/images/gallery/Yercard_ministry.jpeg
+    - assets/images/gallery/German_ministries.jpeg
+    - assets/images/gallery/Feeding_the_poor.jpeg
+    - assets/images/gallery/Berhmans.jpeg
+    - assets/images/Offering_QRCode.jpeg
