@@ -70,6 +70,36 @@ class _HeroCardsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const verseAndMission = Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Center(
+          child: Text(
+            'צָפָה  •  Tsaphah',
+            style: TextStyle(color: AppColors.gold, fontSize: 21),
+          ),
+        ),
+        SizedBox(height: 10),
+        _VerseCard(),
+        SizedBox(height: 16),
+        _MissionVisionCard(),
+      ],
+    );
+
+    if (Responsive.isMobile(context)) {
+      return const Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            verseAndMission,
+            SizedBox(height: 16),
+            _ChurchActivitiesCard(),
+          ],
+        ),
+      );
+    }
+
     return const Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -77,21 +107,7 @@ class _HeroCardsSection extends StatelessWidget {
           flex: 7,
           child: Padding(
             padding: EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Center(
-                  child: Text(
-                    'צָפָה  •  Tsaphah',
-                    style: TextStyle(color: AppColors.gold, fontSize: 21),
-                  ),
-                ),
-                SizedBox(height: 10),
-                _VerseCard(),
-                SizedBox(height: 16),
-                _MissionVisionCard(),
-              ],
-            ),
+            child: verseAndMission,
           ),
         ),
         SizedBox(width: 16),
